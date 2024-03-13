@@ -12,7 +12,7 @@ def main():
         pika.ConnectionParameters(host='localhost', port=5672, credentials=credentials))
     channel = connection.channel()
 
-    channel.queue_declare(queue='web_16_queue', durable=True)
+    channel.queue_declare(queue='web_20_queue', durable=True)
 
     def callback(ch, method, properties, body):
         message = json.loads(body.decode())
